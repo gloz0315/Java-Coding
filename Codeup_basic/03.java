@@ -10,7 +10,7 @@ public class Main {
 
 
         for(int i=0; i < data.length; i++){
-            data[i] = s.charAt(i)-'0';
+            data[i] = s.charAt(i)-'0'; // String이나 Char 형을 int 형으로 변환하는 방법이 charAt() -'0' 을 쓰는 것이라 한다.
         }
 
         for(int j=0; j<5; j++){
