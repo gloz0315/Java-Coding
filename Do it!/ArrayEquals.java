@@ -32,6 +32,6 @@ public class ArrayEquals {
             b[i] = stdIn.nextInt();
         }
 
-        System.out.println("배열 a와 b는 " + (equals(a,b) ? "같습니다" : "같지 않습니다." ));
+        System.out.println("배열 a와 b는 " + (equals(a,b) ? "같습니다" : "같지 않습니다." )); // 조건 연산자 equals(a,b) 가 true면 "같습니다. false면 "같지 않습니다" 
     }
 }
