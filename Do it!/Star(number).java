@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Spria {
     static void spira(int n){
         for(int i = 1; i < n+1; i++){
-            for(int j = 0; j < 5-i; j++)
+            for(int j = 0; j < n-i; j++)
                 System.out.print(" ");
             for(int j = 0; j < 2*(i-1)+1; j++)
                 System.out.print(i % 10);
