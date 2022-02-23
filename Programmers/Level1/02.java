@@ -38,3 +38,32 @@ class Solution {
 
 // 로또의 최대 최소 순위에 관한 문제이다.
 // 프로그래머스 코딩 Level1의 문제
+
+
+
+// 다른 풀이 ( Math 함수를 이용해서 간단하게 )
+public class Solution {
+    public int[] solution(int[] lottos, int[] win_nums){
+        int cnt = 0;
+        int zero_num = 0;
+
+        for(int i = 0; i < lottos.length; i++){
+            if(lottos[i] == 0)
+                zero_num++;
+
+            for(int j = 0; j < win_nums.length; j++){
+                if(lottos[i] == win_nums[j])
+                    cnt++;
+            }
+        }
+        
+        int max = zero_num + cnt;
+        int min = cnt;
+        
+        int[] answer = {Math.min(7-max,6), Math.min(7-min,6)};
+
+        return answer;
+    }
+
+    
+}
