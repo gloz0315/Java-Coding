@@ -60,7 +60,7 @@ public class Solution {
         int max = zero_num + cnt;
         int min = cnt;
         
-        int[] answer = {Math.min(7-max,6), Math.min(7-min,6)};
+        int[] answer = {Math.min(7-max,6), Math.min(7-min,6)};       // 순위에 대한 Math 클래스를 이용하여 최소값을 구함
 
         return answer;
     }
