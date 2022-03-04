@@ -13,7 +13,7 @@ class Solution {
         
         for(int i = 0; i < phone_book.length; i++){
             for(int j = 0; j < phone_book[i].length(); j++){
-                if(map.containsKey(phone_book[i].substring(0,j))) // map안에 있는 phone_book의 접두사를 확인
+                if(map.containsKey(phone_book[i].substring(0,j))) // 길이를 1 ~ 전체길이-1 만큼의 substring을 떼어서, hashmap에 존재한다면 접두어를 존재한다고 
                     return answer = false;
             }
         }
