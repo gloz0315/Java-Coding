@@ -10,13 +10,9 @@ class Solution {
         
         for(int i =0; i < commands.length; i++){
             answerList.add(sorting(array,commands[i][0],commands[i][1],commands[i][2]));           // 각각의 입력값들을 answerList에 더해준다.
-            
+            answer[i] = answerList.get(i);                                                         // 리스트를 배열에 넣기 위해 for문을 이용하여 넣어준다.
         }
-        
-        for(int i = 0; i < answerList.size(); i++){
-            answer[i] = answerList.get(i);                             // 리스트를 배열에 넣기 위해 for문을 이용하여 넣어준다.
-        }
-        
+       
         return answer;
     }
     
