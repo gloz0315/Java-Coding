@@ -87,3 +87,40 @@ class Solution2 {
 // keySet() 메서드는 key 값만 필요한 경우 사용
 // entrySet()이 출력함에 있어서 더 빠름!
 
+
+
+
+import java.util.*;
+import java.util.Iterator;
+
+class Solution {
+    public String solution(String[] participant, String[] completion) {
+        HashMap<String, Integer> map = new HashMap<>();
+        
+        for(int i = 0; i < participant.length; i++){
+            map.put(participant[i], map.getOrDefault(participant[i], 0) + 1);
+        }
+        
+        for(int i = 0; i < completion.length; i++){
+            if(map.containsKey(completion[i])){
+                map.put(completion[i], map.get(completion[i]) - 1);
+            }
+        }
+        
+        Iterator<String> keys = map.keySet().iterator();
+        List<String> lst = new ArrayList<>();
+        
+        while(keys.hasNext()){
+            String key = keys.next();
+            if(map.get(key) != 0){
+                lst.add(key);
+            }
+        }
+        
+        String answer = lst.get(0);
+        
+        return answer;
+    }
+}
+
+// 다시 한번 해 본 결과
