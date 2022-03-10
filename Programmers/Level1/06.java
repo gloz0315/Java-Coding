@@ -67,9 +67,6 @@ class Solution2 {
         }
        
 
-            }
-        }
-
         return answer;
     }
 
