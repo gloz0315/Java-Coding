@@ -34,3 +34,48 @@ class Solution {
 // 프로그래머스 레벨1 K번째 수 문제이다.
 // 정렬을 통해 하는 문제인데, 더욱 간단하게 표현을 해봐야겠다.
 // 또한 배열을 리스트로, 리스트를 배열 형변환에 대하여도 더 공부해야겠다.
+
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+class Solution {
+    public int[] solution(int[] array, int[][] commands) {
+        int first = 0;
+        int end = 0;
+        int number = 0;
+        
+        List<Integer> numberList = new ArrayList<>();
+        
+        for(int i = 0; i < commands.length; i++){
+            first = commands[i][0];
+            end = commands[i][1];
+            number = commands[i][2];
+            
+            numberList.add(sorting(array, first, end, number));
+        }
+        
+        int[] answer = new int[numberList.size()];
+        
+        for(int i = 0; i< answer.length; i++){
+            answer[i] = numberList.get(i);
+        }
+        
+        return answer;
+    }
+    
+    public int sorting(int[] array, int first, int end, int number){
+        
+        List<Integer> answerList = new ArrayList<>();
+        
+        for(int i = first-1; i < end; i++){
+            answerList.add(array[i]);
+        }
+        
+        Collections.sort(answerList);
+        
+        
+        return answerList.get(number-1);
+    }
+}
